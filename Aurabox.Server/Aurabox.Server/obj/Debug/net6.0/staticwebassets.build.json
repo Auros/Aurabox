@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mU8RRXQmQRVNHm3HRwxB8XoYruQpEDfteFudGfQhkI8=",
+  "Source": "Aurabox.Server",
+  "BasePath": "_content/Aurabox.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
