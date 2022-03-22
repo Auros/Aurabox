@@ -1,0 +1,16 @@
+{
+    "name": "Aurabox",
+    "rootNamespace": "Aurabox",
+    "references": [
+        "GUID:7a8d1e3457688fd4fb7bc96fa960cac1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
