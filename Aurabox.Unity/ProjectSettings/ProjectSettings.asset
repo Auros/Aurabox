@@ -765,7 +765,9 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols: {}
-  additionalCompilerArguments: {}
+  additionalCompilerArguments:
+    Standalone:
+    - -nullable+
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
