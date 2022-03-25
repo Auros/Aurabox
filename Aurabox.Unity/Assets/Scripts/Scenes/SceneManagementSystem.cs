@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Aurabox.VContainer;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using VContainer;
@@ -20,6 +21,9 @@ namespace Aurabox
 
         [SerializeField]
         protected SceneSO _defaultActiveScene = null!;
+
+        [SerializeField]
+        protected CanvasGroup _fader = null!;
 
         private SceneLoadData? _activeScene;
         private IObjectResolver? _decoratorContainer;
@@ -73,12 +77,14 @@ namespace Aurabox
             }
 
             _activeScene = new SceneLoadData(scene, sceneContext);
+            await DOTween.To(() => _fader.alpha, s => _fader.alpha = s, 0f, 1f);
         }
 
         private async UniTask UnloadActiveSceneAsync()
         {
             if (_activeScene is { Scene: { isLoaded: true }})
             {
+                await DOTween.To(() => _fader.alpha, s => _fader.alpha = s, 1f, 1f);
                 if (_activeScene.SceneContext != null)
                     _activeScene.SceneContext.Container.Dispose();
                 await SceneManager.UnloadSceneAsync(_activeScene.Scene);

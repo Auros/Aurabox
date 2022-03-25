@@ -30,6 +30,7 @@ MonoBehaviour:
     m_Url: https://package.openupm.com
     m_Scopes:
     - com.cysharp.unitask
+    - com.demigiant.dotween
     - com.openupm
     - jp.hadashikick.vcontainer
     m_IsDefault: 0
