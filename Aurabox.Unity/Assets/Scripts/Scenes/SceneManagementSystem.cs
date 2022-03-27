@@ -42,7 +42,7 @@ namespace Aurabox
 
         public void Restart()
         {
-            UniTask.Create(() => RestartAsync());
+            UniTask.Create(RestartAsync);
         }
 
         private async UniTask RestartAsync()
@@ -77,6 +77,7 @@ namespace Aurabox
             }
 
             _activeScene = new SceneLoadData(scene, sceneContext);
+            await UniTask.Delay(500);
             await DOTween.To(() => _fader.alpha, s => _fader.alpha = s, 0f, 1f);
         }
 

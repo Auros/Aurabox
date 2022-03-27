@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,53 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &223647083
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 223647086}
-  - component: {fileID: 223647085}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &223647085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223647083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &223647086
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223647083}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439723933
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439723934}
   - component: {fileID: 439723935}
+  - component: {fileID: 439723936}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -217,9 +171,23 @@ MonoBehaviour:
   _sceneContext: {fileID: 1876731098}
   _decoratorScenes:
   - {fileID: 11400000, guid: fecbc4731c1edb9489d9859ce537a10d, type: 2}
-  _defaultActiveScene: {fileID: 11400000, guid: 8d1e76d969a5cfd47a37a21844eb08a1,
+  _defaultActiveScene: {fileID: 11400000, guid: 69bf4e348c9c387458246167f4417d29,
     type: 2}
   _fader: {fileID: 2121917048}
+--- !u!114 &439723936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439723933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb0518eab314d646a85a0ee8c1ffb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <SingleComponents>k__BackingField:
+  - {fileID: 439723935}
 --- !u!1 &865185057
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1527208070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +298,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!224 &1527208073
 RectTransform:
@@ -363,6 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876731097}
   - component: {fileID: 1876731098}
+  - component: {fileID: 1876731099}
   m_Layer: 0
   m_Name: '[Project Context]'
   m_TagString: Untagged
@@ -399,6 +368,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _standalone: 1
   _monoInstallers: []
+--- !u!114 &1876731099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876731096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19b79d222e0aec9408ea5ac91205c632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjects:
+  - {fileID: 1527208069}
 --- !u!1 &2121917044
 GameObject:
   m_ObjectHideFlags: 0
