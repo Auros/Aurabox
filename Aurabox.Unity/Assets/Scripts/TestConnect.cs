@@ -5,8 +5,8 @@ namespace Aurabox
 {
     public class TestConnect : MonoBehaviour
     {
-        private NetManager _server;
-        private EventBasedNetListener _listener;
+        private NetManager? _server;
+        private EventBasedNetListener? _listener;
         
         private void Awake()
         {
@@ -18,12 +18,13 @@ namespace Aurabox
 
         private void Update()
         {
-            _server.PollEvents();
+            _server?.PollEvents();
         }
 
         private void OnEnable()
         {
-            _listener.NetworkReceiveEvent += ListenerOnNetworkReceiveEvent;
+            if (_listener != null)
+                _listener.NetworkReceiveEvent += ListenerOnNetworkReceiveEvent;
         }
 
         private static void ListenerOnNetworkReceiveEvent(NetPeer peer, NetPacketReader reader, DeliveryMethod deliverymethod)
@@ -33,7 +34,8 @@ namespace Aurabox
 
         private void OnDisable()
         {
-            _listener.NetworkReceiveEvent -= ListenerOnNetworkReceiveEvent;
+            if (_listener != null)
+                _listener.NetworkReceiveEvent -= ListenerOnNetworkReceiveEvent;
         }
     }
 }

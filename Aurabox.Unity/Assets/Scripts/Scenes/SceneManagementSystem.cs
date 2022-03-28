@@ -23,7 +23,7 @@ namespace Aurabox
         protected SceneSO _defaultActiveScene = null!;
 
         [SerializeField]
-        protected CanvasGroup _fader = null!;
+        protected CanvasFader _canvasFader = null!;
 
         private SceneLoadData? _activeScene;
         private IObjectResolver? _decoratorContainer;
@@ -58,6 +58,7 @@ namespace Aurabox
             await UnloadActiveSceneAsync();
             var parentContainer = _decoratorContainer ?? _sceneContext.Container;
 
+            _canvasFader.gameObject.SetActive(true);
             var scene = SceneManager.GetSceneByName(sceneSO.Name);
             if (!scene.isLoaded)
             {
@@ -78,17 +79,20 @@ namespace Aurabox
 
             _activeScene = new SceneLoadData(scene, sceneContext);
             await UniTask.Delay(500);
-            await DOTween.To(() => _fader.alpha, s => _fader.alpha = s, 0f, 1f);
+            await DOTween.To(() => _canvasFader.Alpha, s => _canvasFader.Alpha = s, 0f, 1f);
+            _canvasFader.gameObject.SetActive(false);
         }
 
         private async UniTask UnloadActiveSceneAsync()
         {
             if (_activeScene is { Scene: { isLoaded: true }})
             {
-                await DOTween.To(() => _fader.alpha, s => _fader.alpha = s, 1f, 1f);
+                _canvasFader.gameObject.SetActive(true);
+                await DOTween.To(() => _canvasFader.Alpha, s => _canvasFader.Alpha = s, 1f, 1f);
                 if (_activeScene.SceneContext != null)
                     _activeScene.SceneContext.Container.Dispose();
                 await SceneManager.UnloadSceneAsync(_activeScene.Scene);
+                _canvasFader.gameObject.SetActive(false);
             }
             _activeScene = null;
         }
