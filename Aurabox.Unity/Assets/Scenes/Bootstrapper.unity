@@ -171,7 +171,7 @@ MonoBehaviour:
   _sceneContext: {fileID: 1876731098}
   _decoratorScenes:
   - {fileID: 11400000, guid: fecbc4731c1edb9489d9859ce537a10d, type: 2}
-  _defaultActiveScene: {fileID: 11400000, guid: 69bf4e348c9c387458246167f4417d29,
+  _defaultActiveScene: {fileID: 11400000, guid: 8d1e76d969a5cfd47a37a21844eb08a1,
     type: 2}
   _canvasFader: {fileID: 1527208074}
 --- !u!114 &439723936
