@@ -1,9 +1,10 @@
 {
-    "name": "Aurabox.VContainer",
-    "rootNamespace": "Aurabox.VContainer",
+    "name": "Aurabox.Scenes",
+    "rootNamespace": "Aurabox.Scenes",
     "references": [
         "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-        "GUID:e5b27486ff4e457489584ec42ac87e66"
+        "GUID:e5b27486ff4e457489584ec42ac87e66",
+        "GUID:cfcd8c570ae30614f9d3fac6f32e6206"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

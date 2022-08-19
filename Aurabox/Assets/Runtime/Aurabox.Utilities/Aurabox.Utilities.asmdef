@@ -1,10 +1,7 @@
 {
-    "name": "Aurabox.VContainer",
-    "rootNamespace": "Aurabox.VContainer",
-    "references": [
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-        "GUID:e5b27486ff4e457489584ec42ac87e66"
-    ],
+    "name": "Aurabox.Utilities",
+    "rootNamespace": "Aurabox.Utilities",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

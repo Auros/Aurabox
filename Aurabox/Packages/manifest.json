@@ -13,6 +13,8 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.8",
     "jp.hadashikick.vcontainer": "1.11.1",
+    "org.nuget.microsoft.unity.analyzers": "1.14.0",
+    "org.nuget.system.collections.immutable": "6.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -47,12 +49,24 @@
   },
   "scopedRegistries": [
     {
-      "name": "package.openupm.com",
+      "name": "OpenUPM",
       "url": "https://package.openupm.com",
       "scopes": [
         "com.cysharp.unitask",
         "com.openupm",
         "jp.hadashikick.vcontainer"
+      ]
+    },
+    {
+      "name": "NuGet",
+      "url": "https://unitynuget-registry.azurewebsites.net",
+      "scopes": [
+        "org.nuget.microsoft.unity.analyzers",
+        "org.nuget.system.collections.immutable",
+        "org.nuget.system.memory",
+        "org.nuget.system.runtime.compilerservices.unsafe",
+        "org.nuget.system.buffers",
+        "org.nuget.system.numerics.vectors"
       ]
     }
   ]
