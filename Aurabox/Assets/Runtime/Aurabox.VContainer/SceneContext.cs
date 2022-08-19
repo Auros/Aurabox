@@ -10,7 +10,7 @@ namespace Aurabox.VContainer
 {
     public class SceneContext : Context
     {
-        private void Awake()
+        private void Start()
         {
             // If the container has not been assigned, create one.
             // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
